@@ -1,0 +1,75 @@
+<div class="episode-detail-container" *ngIf="!isCompleted">
+
+  <!-- Episode Header -->
+  <div class="episode-header">
+    <h2 class="episode-title">
+      title: {{ episode?.Audio_title }}
+    </h2>
+
+    <div class="episode-meta">
+      <span>
+        <i class="bi bi-clock"></i>
+        {{ episode?.duration }} min
+      </span>
+
+      <span>
+        <i class="bi bi-calendar3"></i>
+        {{ episode?.created_at | date:'mediumDate' }}
+      </span>
+    </div>
+  </div>
+
+  <!-- Player Section -->
+  <div class="player-section">
+
+    <!-- 🎮 Controls -->
+    <div class="controls">
+
+      <!-- Play -->
+      <button class="play-btn" (click)="start()" [disabled]="playing">
+        <i class="bi bi-play-fill"></i> Start
+      </button>
+
+      <!-- Stop -->
+      <button class="stop-btn" (click)="stopAll()" *ngIf="playing">
+        <i class="bi bi-stop-fill"></i> Stop
+      </button>
+
+    </div>
+
+    <!-- 📊 Score realtime -->
+    <div class="score-box" *ngIf="playing">
+      <p>Score: <strong>{{ score }}</strong></p>
+    </div>
+
+    <!-- ⏱ Progress -->
+    <div class="audio-progress" *ngIf="duration > 0">
+      <span>{{ formatTime(current_time) }}</span>
+
+      <div class="progress-wrapper">
+        <div class="progress-bar">
+          <div 
+            class="progress-fill"
+            [style.width.%]="(current_time / duration) * 100">
+          </div>
+        </div>
+      </div>
+
+      <span>{{ formatTime(duration) }}</span>
+    </div>
+
+    <!-- 💡 Hint -->
+    <p class="player-hint">
+      🎧 Every 5 seconds you listen, then 10 seconds you speak
+    </p>
+
+  </div>
+
+</div>
+
+<div *ngIf="isCompleted" class="completed-banner">
+  <div class="completed-icon">✅</div>
+  <h2>Already Completed!</h2>
+  <p>You have already listened to this episode. Great job keeping up with your practice!</p>
+  <button (click)="goBack()">Back to Episodes</button>
+</div>

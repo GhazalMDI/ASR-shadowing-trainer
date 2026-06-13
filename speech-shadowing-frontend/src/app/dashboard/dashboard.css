@@ -1,0 +1,539 @@
+/* ===========================
+   General Container
+=========================== */
+
+body{
+    overflow-y: hidden;
+    height: 100vh;
+}
+.container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.row.bg-light {
+  background: #f5f7fa; /* روشن و ملایم */
+  height: 100vh;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ===========================
+   Sidebar
+=========================== */
+.sidebar {
+  background: linear-gradient(180deg, #ffffff, #e6f0f8);
+  height: 100%;
+  padding: 0;
+  color: #1f2a38; /* متن تیره */
+  box-shadow: 3px 0 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  height: 80px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.logo p {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+  color: #0072ff; /* آبی روشن */
+}
+
+.sidebar-content {
+  padding: 20px 12px;
+}
+
+.sidebar-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #6c7a89;
+  margin-bottom: 16px;
+}
+
+/* Nav Links */
+.sidebar-nav .nav-link {
+  color: #1f2a38;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.sidebar-nav .nav-link:hover {
+  background: rgba(0, 114, 255, 0.1);
+  transform: translateX(4px);
+}
+
+.sidebar-nav .nav-link.active {
+  background: linear-gradient(135deg, #00bfff, #1e90ff);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 114, 255, 0.4);
+}
+
+/* ===========================
+   Left Dashboard
+=========================== */
+.left-dashboard {
+  padding: 25px;
+  background: #f0f4f8; /* روشن */
+  color: #1f2a38;
+  overflow-y: auto;
+  height: 100vh;
+  border-radius: 0 12px 12px 0;
+}
+
+/* ===========================
+   Form Styling
+=========================== */
+.left-dashboard form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+.left-dashboard form input {
+  border-radius: 8px;
+  border: 1px solid #cbd6e2;
+  background: #ffffff;
+  color: #1f2a38;
+}
+
+.left-dashboard form input:disabled {
+  background: #e6f0f8;
+}
+
+.left-dashboard .btn-success {
+  background: #00bfff;
+  border: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.left-dashboard .btn-success:hover {
+  background: #1e90ff;
+}
+
+/* ===========================
+   Voice Cards
+=========================== */
+.voice-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+}
+
+.voice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 114, 255, 0.2);
+}
+
+.voice-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.voice-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0072ff;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.completed {
+  background-color: #d0f0ff;
+  color: #0072ff;
+}
+
+.status.in-progress {
+  background-color: #fff4d6;
+  color: #e67e22;
+}
+
+.status.not-started {
+  background-color: #fdecea;
+  color: #e74c3c;
+}
+
+.voice-card-body {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2a38;
+}
+
+.value.errors {
+  color: #e74c3c;
+}
+
+.voice-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.voice-card-footer .btn-outline-primary {
+  color: #0072ff;
+  border-color: #0072ff;
+  transition: all 0.3s ease;
+}
+
+.voice-card-footer .btn-outline-primary:hover {
+  background-color: #0072ff;
+  color: #fff;
+  border-color: #0072ff;
+}
+
+.voice-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 20px;
+}
+
+.voice-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 114, 255, 0.2);
+}
+
+/* Header */
+.voice-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.voice-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0072ff;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.completed {
+  background-color: #d0f0ff;
+  color: #0072ff;
+}
+
+.status.in-progress {
+  background-color: #fff4d6;
+  color: #e67e22;
+}
+
+.status.not-started {
+  background-color: #fdecea;
+  color: #e74c3c;
+}
+
+/* Body */
+.voice-card-body {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-bottom: 4px;
+}
+
+.value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2a38;
+}
+
+.value.errors {
+  color: #e74c3c;
+}
+
+.value.episode a {
+  text-decoration: none;
+  color: #0072ff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.value.episode a:hover {
+  text-decoration: underline;
+  color: #005fd1;
+}
+
+.value.episode i {
+  vertical-align: middle;
+  font-size: 16px;
+  color: #0072ff;
+  transition: transform 0.2s;
+}
+
+.value.episode a:hover i {
+  transform: scale(1.2);
+}
+
+/* Footer */
+.voice-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.voice-card-footer .btn-outline-primary {
+  color: #0072ff;
+  border-color: #0072ff;
+  transition: all 0.3s ease;
+}
+
+.voice-card-footer .btn-outline-primary:hover {
+  background-color: #0072ff;
+  color: #fff;
+  border-color: #0072ff;
+}
+
+
+/* ===========================
+   Container & Sidebar
+=========================== */
+.row.bg-light {
+  background: #f5f7fa; /* روشن و ملایم */
+  height: 100vh;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  background: linear-gradient(180deg, #ffffff, #dce9f7);
+  color: #1f2a38;
+  height: 100%;
+  padding: 0;
+  box-shadow: 4px 0 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav .nav-link {
+  color: #1f2a38;
+  border-radius: 12px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.sidebar-nav .nav-link.active {
+  background: linear-gradient(135deg, #00bfff, #1e90ff);
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+}
+
+.sidebar-nav .nav-link:hover {
+  transform: translateX(5px);
+}
+
+/* ===========================
+   Left Dashboard
+=========================== */
+.left-dashboard {
+  padding: 25px;
+  background: linear-gradient(180deg, #f5f7fa, #e3eefb);
+  border-radius: 0 12px 12px 0;
+  color: #1f2a38;
+  overflow-y: auto;
+  height: 100vh;
+}
+
+/* ===========================
+   User Section Header
+=========================== */
+.user-header {
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #d0f0ff, #a0d8ff);
+  box-shadow: 0 4px 12px rgba(0,114,255,0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.user-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0072ff;
+}
+
+.user-level {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff9f00;
+}
+
+/* ===========================
+   User Form
+=========================== */
+.user-form {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(8px); /* Glass effect */
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 6px 25px rgba(0,114,255,0.15);
+  transition: all 0.3s ease;
+}
+
+.user-form .form-group {
+  margin-bottom: 20px;
+}
+
+.user-form label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.user-form input.form-control {
+  border-radius: 12px;
+  border: 1px solid #cbd6e2;
+  padding: 10px 14px;
+  color: #1f2a38;
+  background: #ffffffcc; /* نیمه شفاف برای حس زنده */
+  transition: all 0.3s ease;
+}
+
+.user-form input.form-control:focus {
+  border-color: #0072ff;
+  box-shadow: 0 0 8px rgba(0,114,255,0.3);
+}
+
+.user-form input.form-control:disabled {
+  background: #e6f0f8;
+  color: #7f8c8d;
+}
+
+/* Submit Button */
+.user-form .btn-primary {
+  background: #0072ff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.user-form .btn-primary:hover {
+  background: #005fd1;
+  box-shadow: 0 6px 20px rgba(0,114,255,0.3);
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .user-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .user-level {
+    margin-top: 8px;
+    text-align: center;
+  }
+}
+
+.level-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  background: linear-gradient(135deg, #00bfff, #1e90ff);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 114, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.level-badge i {
+  font-size: 16px;
+}
+
+/* Hover افکت کوچک برای جذابیت */
+.level-badge:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 114, 255, 0.5);
+}
+
+.tab-header {
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fafafa, #fdfdfd); /* نارنجی ملایم */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.tab-header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333; /* تیره و خوانا */
+}
+

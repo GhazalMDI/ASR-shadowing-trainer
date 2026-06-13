@@ -1,0 +1,203 @@
+/* ===========================
+   Episode List
+=========================== */
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ===========================
+   Episode Item
+=========================== */
+.episode-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  
+}
+
+.episode-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+/* ===========================
+   Play Button
+=========================== */
+.episode-play {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #20c997, #17b187);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.episode-item:hover .episode-play {
+  transform: scale(1.1);
+}
+
+/* ===========================
+   Info
+=========================== */
+.episode-info {
+  flex: 1;
+}
+
+.episode-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2a38;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.episode-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.episode-meta i {
+  margin-right: 6px;
+}
+
+/* ===========================
+   Action
+=========================== */
+.episode-action .btn-outline-primary {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .episode-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .episode-action {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.episode-list-container {
+  display: flex;
+  justify-content: center; /* وسط صفحه */
+  padding: 20px;
+}
+
+.episode-list {
+  display: flex;
+  flex-wrap: wrap; /* کارت‌ها کنار هم قرار بگیرن */
+  gap: 16px;
+  max-width: 1200px; /* محدود کردن عرض کل */
+  width: 100%;
+  justify-content: flex-start;
+}
+
+/* =========================== */
+/* Episode Item – کارت جمع و جور */
+/* =========================== */
+.episode-item {
+  display: flex;
+  flex-direction: column; /* اطلاعات و دکمه زیر هم */
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  width: 800px; /* کارت کوچک و ثابت */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.episode-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.episode-play {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #20c997, #17b187);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.episode-play:hover {
+  transform: scale(1.1);
+}
+
+.episode-info {
+  width: 100%;
+}
+
+.episode-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2a38;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+
+.episode-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #7f8c8d;
+}
+
+.episode-meta i {
+  margin-right: 4px;
+}
+
+.episode-action .btn-outline-primary {
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .episode-list {
+    justify-content: center;
+  }
+
+  .episode-item {
+    width: 90%; /* کارت‌ها در موبایل تقریبا پر عرض */
+  }
+}

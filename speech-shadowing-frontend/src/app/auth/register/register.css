@@ -1,0 +1,117 @@
+/* ===========================
+   Register Page Background
+=========================== */
+.register-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #e3eefb);
+}
+
+/* ===========================
+   Register Card
+=========================== */
+.register-card {
+  width: 480px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+  animation: fadeUp 0.6s ease;
+}
+
+/* Reuse animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===========================
+   Titles
+=========================== */
+.register-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1f2a38;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.register-subtitle {
+  font-size: 14px;
+  color: #7f8c8d;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+.register-card .form-label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.register-card .form-control {
+  border-radius: 12px;
+  padding: 10px 14px;
+  border: 1px solid #cbd6e2;
+  transition: all 0.3s ease;
+}
+
+.register-card .form-control:focus {
+  border-color: #20c997; /* سبز ملایم (غیر آبی 👌) */
+  box-shadow: 0 0 0 4px rgba(32, 201, 151, 0.15);
+}
+
+/* ===========================
+   Register Button
+=========================== */
+.btn-register {
+  background: linear-gradient(135deg, #20c997, #17b187);
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(32, 201, 151, 0.4);
+}
+
+/* ===========================
+   Login Link
+=========================== */
+.login-text {
+  text-align: center;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.login-text a {
+  color: #20c997;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 576px) {
+  .register-card {
+    width: 90%;
+    padding: 25px;
+  }
+}

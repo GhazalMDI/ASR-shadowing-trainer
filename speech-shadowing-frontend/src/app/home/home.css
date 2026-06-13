@@ -1,0 +1,165 @@
+/* ===========================
+   Home Base
+=========================== */
+.home-page {
+  font-family: inherit;
+  color: #1f2a38;
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+.hero-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f5f7fa, #e3eefb);
+}
+
+.hero-section h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 16px;
+  color: #6c7a89;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Buttons */
+.hero-actions .btn-primary {
+  background: #20c997;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+}
+
+.hero-actions .btn-outline {
+  border: 2px solid #20c997;
+  color: #20c997;
+  padding: 12px 28px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-actions .btn-outline:hover {
+  background: #20c997;
+  color: #fff;
+}
+
+/* ===========================
+   Sections
+=========================== */
+.section-title {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* ===========================
+   How It Works
+=========================== */
+.how-it-works {
+  padding: 80px 0;
+}
+
+.step-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-6px);
+}
+
+.step-card i {
+  font-size: 36px;
+  color: #20c997;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   Features
+=========================== */
+.features-section {
+  background: #f9fafc;
+  padding: 70px 0;
+}
+
+.feature-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.feature-card i {
+  font-size: 28px;
+  color: #20c997;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feature-card span {
+  font-weight: 600;
+}
+
+/* ===========================
+   CTA
+=========================== */
+.cta-section {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #20c997, #17b187);
+  color: #fff;
+}
+
+.cta-section h2 {
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  margin-bottom: 25px;
+}
+
+.cta-section .btn-primary {
+  background: #fff;
+  color: #20c997;
+  border-radius: 16px;
+  padding: 14px 32px;
+  font-weight: 700;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 30px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+}

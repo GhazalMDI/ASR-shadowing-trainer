@@ -1,0 +1,142 @@
+<div class="container">
+    <div class="row bg-light" style="height: 100vh;">
+
+        <div class="col-3 sidebar">
+            <div class="logo d-flex align-items-center justify-content-center">
+                <p>Speech Shadowing</p>
+            </div>
+
+            <div class="sidebar-content">
+                <p class="sidebar-title">OVERVIEW</p>
+
+                <div class="nav flex-column nav-pills sidebar-nav" role="tablist">
+                    <button class="nav-link" [class.active]="activeTab === 'user'" (click)="activeTab = 'user'">
+                        <i class="bi bi-person"></i>
+                        User Information
+                    </button>
+
+                    <button class="nav-link" [class.active]="activeTab === 'performance'" (click)="loadPerformance()">
+                        <i class="bi bi-graph-up"></i>
+                        Report Performance
+                    </button>
+
+                    <button class="nav-link">
+                        <i class="bi bi-chat-left-dots"></i>
+                        Messages
+                    </button>
+
+                    <button class="nav-link">
+                        <i class="bi bi-bar-chart-line"></i>
+                        Growth Up
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-9 left-dashboard">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div *ngIf="activeTab === 'user'" tabindex="0">
+                    <section *ngIf="user$ | async as user">
+                        <!-- Header -->
+                        <div class="tab-header d-flex align-items-center justify-content-between mb-4">
+                            <div>
+                                <h3 class="tab-title">Your Information</h3>
+                            </div>
+                            <div>
+                                <div class="level-badge">
+                                    <i class="bi bi-star-fill me-1"></i>
+                                    Level {{ user.level }}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form -->
+                        <form action="" method="patch" class="user-form">
+                            <div class="form-group">
+                                <label for="first_name">First Name</label>
+                                <input id="first_name" type="text" name="first_name" disabled
+                                    value="{{ user.first_name }}" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="last_name">Last Name</label>
+                                <input id="last_name" type="text" name="last_name" disabled value="{{ user.last_name }}"
+                                    class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" name="email" disabled value="{{ user.email }}"
+                                    class="form-control">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary mt-4">Edit Information</button>
+                        </form>
+                    </section>
+                </div>
+
+                <div *ngIf="activeTab === 'performance'">
+
+
+                    <div class="tab-header d-flex align-items-center justify-content-between mb-4">
+                        <h3>Report Performance</h3>
+                    </div>
+                    <div *ngIf="performanceState === 'loading'" class="d-flex justify-content-center">
+                        <div class="spinner-border"></div>
+                    </div>
+                    <div *ngIf="performanceState === 'loaded'"
+                        class="row d-flex align-items-center justify-content-between">
+                        <div class="col-10 mb-4" *ngFor="let p of performances">
+                            <div class="voice-card">
+
+                                <!-- Header -->
+                                <div class="voice-card-header d-flex justify-content-between align-items-center">
+                                    <h5 class="voice-title">{{ p.audio_title }}</h5>
+                                    <span class="status">{{ p.status}}</span>
+                                </div>
+
+                                <!-- Body -->
+                                <div class="voice-card-body d-flex gap-4 flex-wrap">
+                                    <div class="info-item">
+                                        <span class="label">Listened Date</span>
+                                        <span class="value">{{ p.listened_date }}</span>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <span class="label">Wrong Count</span>
+                                        <span class="value errors">{{ p.wrong_count }}</span>
+                                    </div>
+
+                                    <div class="info-item">
+                                        <span class="label">Episode</span>
+                                        <span class="value episode">
+                                            <i class="bi bi-play-circle-fill me-1"></i>
+                                            <a href="#">Go to Episode</a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <!-- Footer -->
+                                <div class="voice-card-footer d-flex justify-content-end gap-2 flex-wrap">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        Listen Again & Grow Score
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div *ngIf="performanceState === 'error'">
+                        Error fetching data
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"
+                    tabindex="0">...</div>
+                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"
+                    tabindex="0">...</div>
+            </div>
+        </div>
+    </div>
+</div>

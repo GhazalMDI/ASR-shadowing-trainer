@@ -1,0 +1,146 @@
+.episode-detail-container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px 25px;
+  background: #f5f7fa;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.episode-header {
+  margin-bottom: 25px;
+}
+
+.episode-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f2a38;
+  margin-bottom: 10px;
+}
+
+.episode-meta span {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-right: 15px;
+}
+
+.player-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play-button-container {
+  margin-bottom: 20px;
+}
+
+.play-btn,.stop-btn {
+  background: linear-gradient(135deg, #20c997, #17b187);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.audio-progress {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-wrapper {
+  flex: 1;
+  height: 8px;
+  background: #d0d0d0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background: #e0e0e0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #20c997, #17b187);
+  transition: width 0.3s linear;
+}
+
+.player-hint {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.controls{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.completed-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 48px 32px;
+  margin: 40px auto;
+  max-width: 480px;
+  background: #f0fdf4;
+  border: 2px solid #86efac;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.completed-icon {
+  font-size: 52px;
+}
+
+.completed-banner h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #15803d;
+  margin: 0;
+}
+
+.completed-banner p {
+  font-size: 15px;
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.completed-banner button {
+  margin-top: 8px;
+  padding: 10px 28px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.completed-banner button:hover {
+  background: #15803d;
+}

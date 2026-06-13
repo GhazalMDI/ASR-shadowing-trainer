@@ -1,0 +1,74 @@
+<div class="register-page d-flex align-items-center justify-content-center">
+  <form
+    (ngSubmit)="register()"
+    method="post"
+    class="register-card"
+  >
+
+    <h3 class="register-title">Create Account ✨</h3>
+    <p class="register-subtitle">Join us and start your journey</p>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="first_name"
+          name="first_name"
+          id="firstName"
+          placeholder="John"
+          required
+        >
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="last_name"
+          name="last_name"
+          id="lastName"
+          placeholder="Doe"
+          required
+        >
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        [(ngModel)]="email"
+        name="email"
+        id="email"
+        placeholder="name@example.com"
+        required
+      >
+    </div>
+
+    <div class="mb-4">
+      <label for="password" class="form-label">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        class="form-control"
+        required
+      >
+    </div>
+
+    <button type="submit" class="btn btn-register w-100">
+      Create Account
+    </button>
+
+    <p class="login-text mt-3">
+      Already have an account?
+      <a href="/Login">Login</a>
+    </p>
+
+  </form>
+</div>

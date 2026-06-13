@@ -1,0 +1,36 @@
+<div class="episode-list-container">
+    <div class="episode-list">
+
+        <div class="episode-item col-8" *ngFor="let ep of episodes">
+            <!-- Play -->
+            <div class="episode-play">
+                <i class="bi bi-play-fill"></i>
+            </div>
+            <!-- Info -->
+            <div class="episode-info">
+                <h6 class="episode-title">
+                    {{ ep.Audio_title }}
+                </h6>
+                <div class="episode-meta">
+                    <span>
+                        <i class="bi bi-clock"></i>
+                        {{ ep.duration }} min
+                    </span>
+                    <span>
+                        <i class="bi bi-calendar3"></i>
+                        {{ ep.created_at | date:'yyyy-MM-dd'}}
+                    </span>
+                </div>
+            </div>
+            <!-- Action -->
+            <div class="episode-action">
+                <button class="btn btn-outline-primary btn-sm" (click)="goToEpisode(ep._id)">
+                    Go to Episode
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
