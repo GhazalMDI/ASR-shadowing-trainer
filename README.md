@@ -191,5 +191,5 @@ Nginx
 
 If you have any questions, suggestions, or feedback about this project, feel free to reach out:
 
-💼 LinkedIn: https://www.linkedin.com/in/ghazal-mohammadi-199986312/
-📧 Email: Ghazal.mohammadi.developer@gmail.com
+* 💼 LinkedIn: https://www.linkedin.com/in/ghazal-mohammadi-199986312/ 
+* 📧 Email: Ghazal.mohammadi.developer@gmail.com
