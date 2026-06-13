@@ -67,8 +67,7 @@ User Recording & Evaluation
 
 * Python
 * FastAPI
-* SQLAlchemy
-* PostgreSQL
+* MongoDB
 * Docker
 
 ---
