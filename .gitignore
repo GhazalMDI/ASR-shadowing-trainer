@@ -1,0 +1,17 @@
+# Angular
+speech-shadowing-engine/node_modules
+speech-shadowing-engine/dist
+
+# Python
+speech-shadowing-engine/__pycache__
+speech-shadowing-engine/.venv
+speech-shadowing-engine/*.db
+speech-shadowing-engine/*.docx
+speech-shadowing-engine/.cookies.txt
+
+# IDE
+.vscode
+.idea
+
+# Docker
+*.log

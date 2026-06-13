@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./speech-shadowing-engine
+    container_name: speech-shadowing-api
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGO_IP=mongodb://mongo:27017/speech_shadowing
+    depends_on:
+      - mongo
+    volumes:
+      - whisper_cache:/root/.cache/whisper
+  frontend:
+    build: ./speech-shadowing-frontend
+    container_name: speech-shadowing-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  mongo:
+    image: mongo
+    container_name: speech_shadowing-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+volumes:
+  mongo_data:
+  whisper_cache:

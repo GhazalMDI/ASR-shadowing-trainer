@@ -1,0 +1,6 @@
+core/.env
+test.py
+venv/
+audio/
+*.docx
+user_access.py
