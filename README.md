@@ -69,6 +69,7 @@ User Recording & Evaluation
 * FastAPI
 * MongoDB
 * Docker
+* WebSocket (real-time communication)
 
 ---
 
